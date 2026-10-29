@@ -1,14 +1,14 @@
 #pragma once
 #include <cstdint>
 
-class Order{
-    public:
-    uint64_t id;
-    enum order_type{
+enum class Side{
         buy,
         sell
     };
-    order_type ordertype;
+
+struct Order{
+    int64_t id;
+    Side side;
     int64_t price;
     int64_t qty;
 
